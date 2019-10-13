@@ -1,9 +1,17 @@
 let nextTodoId = 0
 
-const addTodo = text => ({
+export const addTodo = text => ({
   type: 'ADD_TODO',
   id: nextTodoId++,
   text
 })
 
-export default addTodo;
+export const deleteTodo = id => ({
+  type: 'DELETE_TODO',
+  id
+})
+
+export const completeTodo = id => ({
+  type: 'COMPLETE_TODO',
+  id
+})

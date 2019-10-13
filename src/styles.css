@@ -1,0 +1,46 @@
+p.title {
+    text-align: center;
+    font-family: cursive;
+    font-size: 30px
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+}
+
+.input-task {
+    margin-right: 20px;
+    height: 25px;
+    width: 30%;
+}
+
+.submit-button {
+    border: 1px solid;
+    border-radius: 15px;
+    width: 10%;
+    background-color: burlywood;
+    outline: none;
+}
+
+
+.action-button {
+    color: white;
+    outline: none;
+    border-radius: 5px;
+    height: 30px;
+    width: 120px;
+    margin: 5px 15px;
+}
+
+.delete-button {
+    background-color: red;
+}
+
+.complete-button {
+    background-color: green;
+}
+
+.test {
+    display: flex;
+}
