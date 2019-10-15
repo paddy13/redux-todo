@@ -18,14 +18,6 @@ class App extends React.Component {
     }
   }
 
-  deleteTask(i) {
-    this.props.deleteTodo(i);
-  }
-
-  completeTask(i) {
-    this.props.completeTodo(i);
-  }
-
   render() {
     return (
       <div>
@@ -44,13 +36,13 @@ class App extends React.Component {
         <ol>
           {this.props.todos && this.props.todos.map((todo, i) => {
             return (
-              <div className='list-group' key={todo.id}>
+              <div key={todo.id}>
                 <li style={{ textDecoration: todo.completed ? 'line-through' : 'none' }}> {todo.text} </li>
-                <div className='test'>
-                  <button className='action-button delete-button' type='button' onClick={() => this.deleteTask(todo.id)}>
+                <div className='action-buttons'>
+                  <button className='delete-button' type='button' onClick={() => this.props.deleteTodo(todo.id)}>
                     Delete
                   </button>
-                  <button className='action-button complete-button' type='button' onClick={() => this.completeTask(todo.id)}>
+                  <button className='complete-button' type='button' onClick={() => this.props.completeTodo(todo.id)}>
                     {todo.completed ? 'Mark As Incomplete' : 'Mark As Complete'}
                   </button>
                 </div>

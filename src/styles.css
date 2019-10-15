@@ -24,7 +24,7 @@ p.title {
 }
 
 
-.action-button {
+.delete-button, .complete-button {
     color: white;
     outline: none;
     border-radius: 5px;
@@ -41,6 +41,6 @@ p.title {
     background-color: green;
 }
 
-.test {
+.action-buttons {
     display: flex;
 }
